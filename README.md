@@ -1,8 +1,6 @@
-# Updating the README content to include the mathematical formulas using Markdown syntax.
-
 # TDVP Hydrogen Simulation
 
-This repository implements a TDVP (Time-Dependent Variational Principle) simulation based on the paper ["Simulation of a Hydrogen Atom in a Laser Field Using the Time-Dependent Variational Principle"](https://link.aps.org/doi/10.1103/PhysRevE.101.023313).
+This repository implements a TDVP (Time-Dependent Variational Principle) simulation based on the paper ["Simulation of a Hydrogen Atom in a Laser Field Using the Time-Dependent Variational Principle"](https://link.aps.org/doi/10.1103/PhysRevE.101.023313). 
 
 # Requirements
 
@@ -45,5 +43,3 @@ $$
 - **`tdvp_crank_nicolson.py`**: Adds the Crank-Nicolson approach to update the coefficients \( \\gamma \).
 
 For more detailed information, please refer to the source code files.
-"""
-
