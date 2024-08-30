@@ -27,7 +27,10 @@ scipy==1.10.1
 - **`groundstate_solver.py`**: Uses the finite difference method to solve the ground state radial wave function \( R(r) \) for a hydrogen atom under a 3D soft Coulomb potential.
 - **`gaussian_expansion_for_groundstate.py`**: Expands the ground state into Gaussian bases using `scipy.optimize.curve_fit`. The ground state is represented as:
   
-  $$\\psi_{\\text{groundstate}}(r) = \\sum_{i=0}^{n_{\\text{\\psi_}}} g_i$$
+$$
+\psi_{\text{groundstate}}(r) = \sum_{i=0}^{n_{\text{gaussians}}} g_i
+$$
+
   
 - **`gaussian_expansion_for_groundstate_tf.py`**: Uses TensorFlow's optimizer for ground state expansion.
 
