@@ -19,7 +19,7 @@ scipy==1.10.1
 ### Potential Expansion
 - **`gaussian_expansion_for_potential.py`**: Expands the soft Coulomb potential into Gaussian bases using `scipy.optimize.curve_fit`. The potential is expressed as:
   
-  $$V(r) = -\\frac{1}{\\sqrt{r^2 + a^2}} = \\sum_{i=0}^{n_{\\text{\\V}}} C_i \\cdot \\exp(-\\sigma_i \\cdot r^2)$$
+  $$V(r) = -\\frac{1}{\\sqrt{r^2 + a^2}} = \\sum_{i=0}^{n_{\\text{V}}} C_i \\cdot \\exp(-\\sigma_i \\cdot r^2)$$
   
 - **`gaussian_expansion_for_potential_tf.py`**: Utilizes TensorFlow's optimizer for potential expansion.
 
@@ -27,7 +27,7 @@ scipy==1.10.1
 - **`groundstate_solver.py`**: Uses the finite difference method to solve the ground state radial wave function \( R(r) \) for a hydrogen atom under a 3D soft Coulomb potential.
 - **`gaussian_expansion_for_groundstate.py`**: Expands the ground state into Gaussian bases using `scipy.optimize.curve_fit`. The ground state is represented as:
   
-  $$\\psi_{\\text{groundstate}}(r) = \\sum_{i=0}^{n_{\\text{\\psi}}} g_i$$
+  $$\\psi_{\\text{groundstate}}(r) = \\sum_{i=0}^{n_{\\text{\\psi_}}} g_i$$
   
 - **`gaussian_expansion_for_groundstate_tf.py`**: Uses TensorFlow's optimizer for ground state expansion.
 
