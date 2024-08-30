@@ -40,6 +40,6 @@ $$
 
 ## Other Versions
 - **`tdvp_sympy_version.py`**: Aims to achieve the same functionality as `tdvp.py`, utilizing SymPy to parse the kernel function and operator, and to calculate Gaussian integrations through recursion.
-- **`tdvp_crank_nicolson.py`**: Adds the Crank-Nicolson approach to update the coefficients \( \\gamma \).
+- **`tdvp_crank_nicolson.py`**: Adds the Crank-Nicolson approach to update the coefficients $$\gamma$$.
 
 For more detailed information, please refer to the source code files.
