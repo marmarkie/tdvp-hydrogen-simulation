@@ -4,6 +4,18 @@
 
 This repository implements a TDVP (Time-Dependent Variational Principle) simulation based on the paper ["Simulation of a Hydrogen Atom in a Laser Field Using the Time-Dependent Variational Principle"](https://link.aps.org/doi/10.1103/PhysRevE.101.023313).
 
+## Requirements
+\`\`\`text
+# python==3.9.7
+matplotlib==3.6.2
+numpy==1.24.4
+scikit_learn==1.1.3
+setuptools==65.5.0
+sympy==1.11.1
+torch==2.2.2
+tqdm==4.66.2
+\`\`\`
+
 ## Overview
 
 ### Potential Expansion
