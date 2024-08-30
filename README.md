@@ -20,7 +20,7 @@ scipy==1.10.1
 - **`gaussian_expansion_for_potential.py`**: Expands the soft Coulomb potential into Gaussian bases using `scipy.optimize.curve_fit`. The potential is expressed as:
   
   $$
-  V(r) = -\\frac{1}{\\sqrt{r^2 + a^2}} = \\sum_{i=0}^{n_{\\text{V}}} C_i \\cdot \\exp(-\\sigma_i \\cdot r^2)
+  V(r) = -\\frac{1}{\\sqrt{r^2 + a^2}} = \\sum_{i=1}^{n_{\\text{V}}} C_i \\cdot \\exp(-\\sigma_i \\cdot r^2)
   $$
   
 - **`gaussian_expansion_for_potential_tf.py`**: Utilizes TensorFlow's optimizer for potential expansion.
@@ -30,7 +30,7 @@ scipy==1.10.1
 - **`gaussian_expansion_for_groundstate.py`**: Expands the ground state into Gaussian bases using `scipy.optimize.curve_fit`. The ground state is represented as:
   
 $$
-\psi_{\text{groundstate}}(r) = \sum_{i=0}^{n_{\psi}} g_i
+\psi_{\text{groundstate}}(r) = \sum_{i=1}^{n_{\psi}} g_i(x,y,z)
 $$
 
   
