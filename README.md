@@ -1,23 +1,41 @@
-# tdvp hydrogen simulation
-This repo tries to implement tdvp simulation based on the paper ["Simulation of a hydrogen atom in a laser ﬁeld using the time-dependent variational principle"](https://link.aps.org/doi/10.1103/PhysRevE.101.023313).
-In the potential expansion folder, gaussian_expansion_for_potential.py expands soft Soft Coulomb potential into gaussain bases via scipy.optimize.curve_fit
-that is
-  V(r) = -1 / sqrt(r^2 + a^2) = Σ Ci * exp(-σi * r^2), (0 <= i < 5)
-gaussian_expansion_for_potential_tf.py uses optimizer in tensorflow for potential expansion.
+# Creating a README file with the provided content
 
-In the groundstate_generator folder, groundstate_solver.py uses the finite difference method to solve the ground state radial wave function R(r) for a hydrogen atom under a 3D soft Coulomb potential.
-gaussian_expansion_for_groundstate.py expands groundstate into gaussain bases via scipy.optimize.curve_fit
-that is
-  ψ_groundstate(r) = Σ gi , (0 <= i < n_gaussians)
-gaussian_expansion_for_groundstate_tf.py uses optimizer in tensorflow for groundstate expansion.
+readme_content = """
+# TDVP Hydrogen Simulation
 
-gaussian_integration.py implements necessary integrations for tdvp.py.
-tdvp.py implements the PTG-basis to simulate a hydrogen atom under a soft Coulomb potential, starting from the groundstate.
+This repository implements a TDVP (Time-Dependent Variational Principle) simulation based on the paper ["Simulation of a Hydrogen Atom in a Laser Field Using the Time-Dependent Variational Principle"](https://link.aps.org/doi/10.1103/PhysRevE.101.023313).
 
+## Overview
 
-In the other_versions folder, tdvp_sympy_version.py and tdvp_crank_nicolson.py 旨在实现与tdvp.py相同的功能. 
-tdvp_sympy_version.py utilizes SymPy to parse the kernel function and operator, 
-and to calculate Gaussian integrations through recursion.
-tdvp_crank_nicolson.py adds Crank-Nicolson approach to update the coefﬁcients γ.
+### Potential Expansion
+- **`gaussian_expansion_for_potential.py`**: Expands the soft Coulomb potential into Gaussian bases using `scipy.optimize.curve_fit`. The potential is expressed as:
+  \[
+  V(r) = -\\frac{1}{\\sqrt{r^2 + a^2}} = \\sum_{i=0}^{4} C_i \\cdot \\exp(-\\sigma_i \\cdot r^2)
+  \]
+- **`gaussian_expansion_for_potential_tf.py`**: Utilizes TensorFlow's optimizer for potential expansion.
 
-More detailed information are provided in source codes.
+### Ground State Generation
+- **`groundstate_solver.py`**: Uses the finite difference method to solve the ground state radial wave function \( R(r) \) for a hydrogen atom under a 3D soft Coulomb potential.
+- **`gaussian_expansion_for_groundstate.py`**: Expands the ground state into Gaussian bases using `scipy.optimize.curve_fit`. The ground state is represented as:
+  \[
+  \\psi_{\\text{groundstate}}(r) = \\sum_{i=0}^{n_{\\text{gaussians}}} g_i
+  \]
+- **`gaussian_expansion_for_groundstate_tf.py`**: Uses TensorFlow's optimizer for ground state expansion.
+
+### TDVP Implementation
+- **`gaussian_integration.py`**: Implements the necessary integrations for `tdvp.py`.
+- **`tdvp.py`**: Implements the PTG-basis to simulate a hydrogen atom under a soft Coulomb potential, starting from the ground state.
+
+## Other Versions
+- **`tdvp_sympy_version.py`**: Aims to achieve the same functionality as `tdvp.py`, utilizing SymPy to parse the kernel function and operator, and to calculate Gaussian integrations through recursion.
+- **`tdvp_crank_nicolson.py`**: Adds the Crank-Nicolson approach to update the coefficients \( \\gamma \).
+
+For more detailed information, please refer to the source code files.
+"""
+
+# Saving the README content to a file
+file_path = '/mnt/data/README.md'
+with open(file_path, 'w') as file:
+    file.write(readme_content)
+
+file_path
