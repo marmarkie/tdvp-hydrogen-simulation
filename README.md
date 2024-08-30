@@ -1,6 +1,5 @@
-# Correcting the README content to remove LaTeX style math expressions, as they are not supported by default in GitHub README files.
-
-readme_content_corrected = """
+# Updating the README content to include the mathematical formulas using Markdown syntax.
+readme_content_with_math = """
 # TDVP Hydrogen Simulation
 
 This repository implements a TDVP (Time-Dependent Variational Principle) simulation based on the paper ["Simulation of a Hydrogen Atom in a Laser Field Using the Time-Dependent Variational Principle"](https://link.aps.org/doi/10.1103/PhysRevE.101.023313).
@@ -9,13 +8,17 @@ This repository implements a TDVP (Time-Dependent Variational Principle) simulat
 
 ### Potential Expansion
 - **`gaussian_expansion_for_potential.py`**: Expands the soft Coulomb potential into Gaussian bases using `scipy.optimize.curve_fit`. The potential is expressed as:
-  V(r) = -1 / sqrt(r^2 + a^2) = Σ Ci * exp(-σi * r^2), (0 <= i < 5)
+  
+  $$V(r) = -\\frac{1}{\\sqrt{r^2 + a^2}} = \\sum_{i=0}^{4} C_i \\cdot \\exp(-\\sigma_i \\cdot r^2)$$
+  
 - **`gaussian_expansion_for_potential_tf.py`**: Utilizes TensorFlow's optimizer for potential expansion.
 
 ### Ground State Generation
-- **`groundstate_solver.py`**: Uses the finite difference method to solve the ground state radial wave function R(r) for a hydrogen atom under a 3D soft Coulomb potential.
+- **`groundstate_solver.py`**: Uses the finite difference method to solve the ground state radial wave function \( R(r) \) for a hydrogen atom under a 3D soft Coulomb potential.
 - **`gaussian_expansion_for_groundstate.py`**: Expands the ground state into Gaussian bases using `scipy.optimize.curve_fit`. The ground state is represented as:
-  ψ_groundstate(r) = Σ gi , (0 <= i < n_gaussians)
+  
+  $$\\psi_{\\text{groundstate}}(r) = \\sum_{i=0}^{n_{\\text{gaussians}}} g_i$$
+  
 - **`gaussian_expansion_for_groundstate_tf.py`**: Uses TensorFlow's optimizer for ground state expansion.
 
 ### TDVP Implementation
@@ -24,14 +27,14 @@ This repository implements a TDVP (Time-Dependent Variational Principle) simulat
 
 ## Other Versions
 - **`tdvp_sympy_version.py`**: Aims to achieve the same functionality as `tdvp.py`, utilizing SymPy to parse the kernel function and operator, and to calculate Gaussian integrations through recursion.
-- **`tdvp_crank_nicolson.py`**: Adds the Crank-Nicolson approach to update the coefficients γ.
+- **`tdvp_crank_nicolson.py`**: Adds the Crank-Nicolson approach to update the coefficients \( \\gamma \).
 
 For more detailed information, please refer to the source code files.
 """
 
-# Saving the corrected README content to a file
-file_path_corrected = '/mnt/data/README_corrected.md'
-with open(file_path_corrected, 'w') as file:
-    file.write(readme_content_corrected)
+# Saving the updated README content to a file
+file_path_with_math = '/mnt/data/README_with_math.md'
+with open(file_path_with_math, 'w') as file:
+    file.write(readme_content_with_math)
 
-file_path_corrected
+file_path_with_math
